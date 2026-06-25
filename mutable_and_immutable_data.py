@@ -1,13 +1,7 @@
 """
-Python Mutability and Immutability Guide
-=========================================
-A clean, educational guide demonstrating how memory handles different 
-built-in data types in Python. Ideal for beginners and reference.
-
-Concepts in Simple Words:
-- MUTABLE: Like a whiteboard. You can change, add, or erase contents 
+MUTABLE: Like a whiteboard. You can change, add, or erase contents 
   without moving the board to a different room (Memory ID stays the same).
-- IMMUTABLE: Like a printed book. You cannot erase its ink. To make a change, 
+IMMUTABLE: Like a printed book. You cannot erase its ink. To make a change, 
   you must print a brand-new book in a new location (Memory ID changes).
 """
 
