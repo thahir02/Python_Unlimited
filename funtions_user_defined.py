@@ -43,6 +43,10 @@ def add_numbers(a, b):
 result = add_numbers(10, 20)
 print(result)  # Outputs: 30
 ```
+
+#some more examples
+
+
 # TYPE 1: No arguments and No return value
 # Everything happens entirely inside the function.
 def type_one():
