@@ -10,3 +10,11 @@ even_num = lambda x, y: x + y
 # Step 1: x = 9, y = 1 -> returns 9 + 1 = 10
 # Step 2: x = 10 (previous result), y = 5 -> returns 10 + 5 = 15
 print(reduce(even_num, lst))  # Outputs: 15
+
+
+
+# or
+
+from functools import reduce
+lst=[9,1,5]
+print(reduce(lambda x,y : x+y,lst))
