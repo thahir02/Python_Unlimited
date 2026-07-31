@@ -66,5 +66,17 @@ tokens = re.split(r"[:;.]\s*", raw_output)
 print(tokens)
 # Output: ['Step1', 'Parse data', 'Step2', 'Embed vectors', 'Step3', 'Query database', '']
 
+
+'''
+Quick Reference Summary
+| **Function** | **Primary Use Case in AI/NLP**                                                | **Pattern / Syntax**                    | **Returns**                      | **Example**                       |
+| ------------ | ----------------------------------------------------------------------------- | --------------------------------------- | -------------------------------- | --------------------------------- |
+| `match()`    | Verifying if a text block starts with specific metadata tags.                 | `re.match(pattern, string)`             | Match object or `None`           | `re.match(r"^Title", text)`       |
+| `search()`   | Locating the first instance of a keyword or entity anywhere in text.          | `re.search(pattern, string)`            | Match object or `None`           | `re.search(r"AI", text)`          |
+| `group()`    | Isolating and pulling out structural pieces of text (e.g., entity names).     | `match.group()`                         | String                           | `match.group(1)`                  |
+| `sub()`      | Data cleaning, anonymization, and removing HTML formatting.                   | `re.sub(pattern, replacement, string)`  | Modified string                  | `re.sub(r"<.*?>", "", html_text)` |
+| `subn()`     | Data cleaning with auditing metrics (knowing how many fixes occurred).        | `re.subn(pattern, replacement, string)` | Tuple `(Modified String, Count)` | `re.subn(r"\d", "#", text)`       |
+| `split()`    | Tokenization of custom log lines, system prompts, or multi-hop agent scripts. | `re.split(pattern, string)`             | List of strings                  | `re.split(r",\s*", text)`         |
+'''
   
 
