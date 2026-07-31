@@ -1,0 +1,70 @@
+'''
+The types of functions used in regular expressions :-
+In Python's built-in re module, regular expressions are essential tools for Artificial Intelligence (AI), Natural Language Processing (NLP), and LLM data cleansing. 
+They process unstructured text into standardized data.
+Here is how match(), search(), group(), sub(), subn(), and split() operate with examples.
+
+match() and search() :-
+  These functions look for a specific pattern in text but start their scan from different positions.
+  match() checks for a pattern only at the very beginning of the string.
+  search() scans the entire string and returns the first occurrence of the pattern.
+  Both return a Match object if successful, or None if no match is found.
+  Example :-
+'''
+import re
+text = "AI agents are transforming software development."
+# re.match() looks at the start of the string
+print(re.match(r"agents", text))  # Output: None (because "agents" is not at the beginning)
+# re.search() scans the entire string
+result = re.search(r"agents", text)
+print(result)  # Output: <re.Match object; span=(3, 9), match='agents'>
+'''
+group() :-
+  The group() method extracts the actual matched text from a successful Match object.
+  group(0) or group() returns the entire matched string.
+  group(1), group(2), etc., extract specific substrings isolated by parentheses () (capturing groups).
+  Example :-
+'''
+import re
+# AI Prompt extraction example
+text = "System Prompt: You are a helpful assistant."
+# Group 1 captures the label, Group 2 captures the instruction
+match_obj = re.search(r"(System Prompt): (.*)", text)
+if match_obj:
+    print(match_obj.group(0))  # Output: "System Prompt: You are a helpful assistant."
+    print(match_obj.group(1))  # Output: "System Prompt"
+    print(match_obj.group(2))  # Output: "You are a helpful assistant."
+'''
+sub() and subn() :-
+  These functions find patterns and substitute them with a new string. They are widely used to sanitize training data (e.g., removing private information, URLs, or HTML tags).
+  sub() returns only the modified string.
+  subn() returns a tuple containing the modified string and the total number of substitutions made.
+  Example :-
+'''
+import re
+# Cleaning a chat log to protect user privacy
+chat_log = "User contact is user1@email.com. Agent contact is support@email.com."
+email_pattern = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
+# re.sub() replaces all emails with a placeholder
+clean_text = re.sub(email_pattern, "[REDACTED_EMAIL]", chat_log)
+print(clean_text) 
+# Output: "User contact is [REDACTED_EMAIL]. Agent contact is [REDACTED_EMAIL]."
+# re.subn() does the same but counts the changes
+clean_text_tuple = re.subn(email_pattern, "[REDACTED_EMAIL]", chat_log)
+print(clean_text_tuple) 
+# Output: ('User contact is [REDACTED_EMAIL]. Agent contact is [REDACTED_EMAIL].', 2)
+'''
+split() :-
+  The split() function splits a string into a list of substrings wherever the regex pattern matches. This is useful for tokenizing text into sentences or words based on irregular punctuation.
+  Example :-
+'''
+import re
+# Tokenizing an LLM output by punctuation or special symbols
+raw_output = "Step1: Parse data; Step2: Embed vectors; Step3: Query database."
+# Split by a colon, a semicolon, or a period, followed by optional spaces
+tokens = re.split(r"[:;.]\s*", raw_output)
+print(tokens)
+# Output: ['Step1', 'Parse data', 'Step2', 'Embed vectors', 'Step3', 'Query database', '']
+
+  
+
