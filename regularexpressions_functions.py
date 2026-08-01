@@ -1,4 +1,28 @@
 '''
+Python's RegularExpression(re) module allows exactly two types of data: Strings (str) and Bytes (bytes).You cannot mix them. The data type of your pattern must perfectly match the data type of your text.
+
+1. String Type (Most Common)Both the regex pattern and the text being searched are standard Unicode strings.
+Example:- '''
+import re
+pattern = r"\d+"  # String
+text = "The year is 2026."  # String
+print(re.findall(pattern, text))  # Works perfectly
+''''
+2. Bytes Type (For Binary Data)Both the regex pattern and the text being searched are raw bytes. 
+  This is used when reading binary files, images, or network packets. You define bytes using a b prefix (e.g., b"pattern").
+Example:-'''
+import re
+pattern_bytes = b"\d+"  # Bytes
+text_bytes = b"The year is 2026."  # Bytes
+print(re.findall(pattern_bytes, text_bytes))  # Works perfectly
+'''
+❌ What Happens If You Mix Them?If you try to use a string pattern on bytes data, or vice versa, Python will raise a TypeError.
+Example :-'''
+import re
+# This will CRASH with a TypeError: cannot use a string pattern on a bytes-like object
+re.findall(r"\d+", b"The year is 2026.")
+
+'''
 The types of functions used in regular expressions :-
 In Python's built-in re module, regular expressions are essential tools for Artificial Intelligence (AI), Natural Language Processing (NLP), and LLM data cleansing. 
 They process unstructured text into standardized data.
