@@ -1,3 +1,4 @@
+'''
 Data Structures :-
   Python provides four core built-in data structures—Lists, Tuples, Sets, and Dictionaries.
 
@@ -66,3 +67,4 @@ A dynamic array is a random-access, sequential data structure that automatically
     The Resize Trigger: When you attempt to append to a saturated array, the structure requests a brand-new, larger block of contiguous memory from the operating system.
     Growth Factor: Python typically uses a geometric growth factor (roughly 1.125× to 1.5× the old size, plus a small constant padding) to ensure it does not request memory too frequently.
     The Data Copy: The array copies all existing elements from the old memory block into the new memory block, deletes the old block, and inserts the new item.
+'''
