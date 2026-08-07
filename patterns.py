@@ -174,7 +174,18 @@ for i in range(0,n):
         else:
             print(" ",end=" ")
     print()
+#---------------- or ---------------#
 '''
+# Pattern 11
+n=int(input("Enter the size : "))
+for i in range(0,n):
+    for k in range(0,(n-1)-i):
+        print(" ",end = " ")
+    for j in range(0,n):
+        if(j<=i):
+            print("*",end = " ")
+    print()
+    
 Output :-
 Enter the size :  5
         * 
