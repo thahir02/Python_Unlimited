@@ -194,3 +194,71 @@ Enter the size :  5
   * * * * 
 * * * * * 
 '''
+# Pattern 12 
+n=int(input("Enter the size : "))
+for i in range(0,n):
+    for k in range(0,(n-1)-i):
+        print(" ",end="")
+    for j in range(0,n):
+        if(j<=i):
+            print("* ",end="")
+    print()
+#--------- or -------------#
+'''
+n=int(input("Enter the size : "))
+for i in range(0,n):
+    for j in range(0,n):
+        if j+i+1 >= n:
+            print("* ", end="")
+        else:
+            print(" ",end="")
+    print()
+
+Output :-
+Enter the size :  5
+    * 
+   * * 
+  * * * 
+ * * * * 
+* * * * * 
+'''
+# Pattern 13 
+n=int(input("Enter the size : "))
+for i in range(0,n):
+    for k in range(0,(n-1)-i):
+        print(" ",end="")
+    for j in range(0,n):
+        if j==0 or j==i or i==n-1 :
+            print("* ",end="")
+        else :
+            print("  ",end="")
+    print()
+'''
+Output :-
+Enter the size :  5
+    *         
+   * *       
+  *   *     
+ *     *   
+* * * * * 
+'''
+# Pattern 14 
+n=int(input("Enter the size : "))
+for i in range(0,n):
+    for k in range(0,(n-1)-i):
+        print(" ",end="")
+    for j in range(0,n):
+        if j==0 or j==i or i==n-1 :
+            print(j+1,end=" ")
+        else :
+            print(" ",end=" ")
+    print()
+'''
+Output :-
+Enter the size :  5
+    1         
+   1 2       
+  1   3     
+ 1     4   
+1 2 3 4 5 
+'''
