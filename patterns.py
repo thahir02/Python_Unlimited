@@ -262,3 +262,93 @@ Enter the size :  5
  1     4   
 1 2 3 4 5 
 '''
+#Pattern 15
+n=int(input("Enter the Size : "))
+for i in range(0,n):
+    for j in range(0,n):
+        if j==0 or i==n-1 or i==j :
+            print(j+1,end=" ")
+        else :
+            print(" ",end=" ")
+    print()
+'''
+Output :-
+Enter the Size :  5
+1         
+1 2       
+1   3     
+1     4   
+1 2 3 4 5 
+'''
+#Pattern 16
+n=int(input("Enter the Size : "))
+for i in range(0,n):
+    for j in range(0,n):
+        if(i>=j):
+            print(j+1,end=" ")
+        else :
+            print(" ",end =" ")
+    print()
+'''
+Output :-
+Enter the Size :  5
+1         
+1 2       
+1 2 3     
+1 2 3 4   
+1 2 3 4 5 
+'''
+# Pattern 17
+n=int(input("Enter the Size : "))
+for i in range(0,n):
+    for j in range(0,n):
+        if i==0 or j==0 or i+j==n-1 :
+            print(i+j+1,end=" ")
+        else :
+            print(" ",end =" ")
+    print()
+'''
+Output :-
+Enter the Size :  5
+1 2 3 4 5 
+2     5   
+3   5     
+4 5       
+5 
+'''
+#Pattern 18
+n=int(input("Enter the Size : "))
+for i in range(0,n):
+    for j in range(0,n):
+        if j<=(n-i)-1:
+            print(j+1,end=" ")
+        else :
+            print(" ",end =" ")
+    print()
+'''
+Output :-
+Enter the Size :  5
+1 2 3 4 5 
+1 2 3 4   
+1 2 3     
+1 2       
+1  
+'''
+# Pattern 19
+n=int(input("Enter the Size : "))
+for i in range(0,n):
+    for j in range(0,n):
+        if j<=(n-i)-1:
+            print(i+j+1,end=" ")
+        else :
+            print(" ",end =" ")
+    print()
+'''
+Output :-
+Enter the Size :  5
+1 2 3 4 5 
+2 3 4 5   
+3 4 5     
+4 5       
+5  
+'''
