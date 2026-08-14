@@ -109,3 +109,43 @@ Multiple elements replaced with single element : [2, 23, 2, 3, 4, 5, 6, 7, 8, 9,
 Alternating replacing elements : [2, 23, 2, 3, 2, 5, 2, 7, 2, 9, 2, 11]
 remove any specific elements : [2, 23, 2, 3, 2, 2, 7, 2, 9, 2, 11]
 '''
+# pop() and del in list
+#Using pop()
+lst=[1,3,5,7,9,8,11,12]
+print(lst)
+#default pop the last element
+print("default pop the last element",end=" : ")
+lst.pop()
+print(lst)
+#pop using index value
+print("pop using index value",end=" : ")
+lst.pop(5)
+print(lst)
+#Using del()
+lst=[5,4,3,2,1,5,9,2]
+print(lst)
+# del() use to delete a single element
+print("del() use to delete a single element",end=" : ")
+del lst[1]
+print(lst)
+# del() use to delete a slice of elements
+print("del() use to delete a slice of elements",end=" : ")
+del lst[2:5]
+print(lst)
+lst=[1,2,3,4,5,6,7]
+print(lst)
+# del() use to delete the alternate elements
+print("del() use to delete the alternate elements",end=" : ")
+del lst[1::2]
+print(lst)
+'''
+Output :-
+[1, 3, 5, 7, 9, 8, 11, 12]
+default pop the last element : [1, 3, 5, 7, 9, 8, 11]
+pop using index value : [1, 3, 5, 7, 9, 11]
+[5, 4, 3, 2, 1, 5, 9, 2]
+del() use to delete a single element : [5, 3, 2, 1, 5, 9, 2]
+del() use to delete a slice of elements : [5, 3, 9, 2]
+[1, 2, 3, 4, 5, 6, 7]
+del() use to delete the alternate elements : [1, 3, 5, 7]
+'''
